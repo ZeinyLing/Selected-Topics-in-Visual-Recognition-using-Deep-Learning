@@ -97,5 +97,4 @@ The implementation uses mixed precision training for efficiency and includes ear
 
 ## Performance snapshot
 
-![image](https://github.com/user-attachments/assets/9b3865ff-0032-469e-8676-e21e3fb029fc)
-
+![image](https://github.com/ZeinyLing/Selected-Topics-in-Visual-Recognition-using-Deep-Learning/blob/main/HW1/imgs/score.png)
