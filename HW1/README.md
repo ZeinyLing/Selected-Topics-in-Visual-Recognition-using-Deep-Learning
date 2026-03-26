@@ -81,16 +81,19 @@ The following modifications and strategies are applied in the model and training
 
 1. **SE Block**: Squeeze-and-Excitation (SE) blocks are integrated into ResNet50 to enhance the model’s ability to focus on important channel features.
 2. **Dropout**: A dropout layer (0.4) is added before the classification layer to reduce the risk of overfitting.
-3. **Channel Attention**: A Squeeze-and-Excitation module with reduction ratio 16 recalibrates feature importance
-4. **Classification Head**: A classifier with optional dropout (p=0.5) produces the final prediction across 100 classes
-
+3. **Label Smoothing**: Label smoothing is applied in the loss function to improve decision boundary learning and reduce overconfidence.
+4. **Learning Rate Scheduler**: A cosine learning rate scheduler is used to gradually decrease the learning rate, leading to more stable convergence.
+5. **Test-Time Augmentation (TTA)**: During inference, horizontal flipping is applied and predictions are averaged to improve stability and accuracy.
+6. **Model Ensemble**: Three models with the same architecture but different random seeds are trained and ensembled. Both hard voting and soft voting methods are explored to further improve overall classification performance.
 The implementation uses mixed precision training for efficiency and includes early stopping to prevent overfitting.
 
 ## Performance
 
+- Parameters: 24.4M (within competition constraint of 100M)
+- Parameters: 73.2M (within competition constraint of 100M)
 - Validation accuracy: 0.9133
 - Public test data accuracy: 0.96
-- Parameters: 89.1M (within competition constraint of 100M)
+
 
 ## Performance snapshot
 
