@@ -20,15 +20,15 @@ pip install -r requirements.txt
 
 ```
 .
-├── config.py       # Configuration parameters
-├── config.py       # Configuration parameters
-├── inference.py    # Test prediction code
-├── train.py        # Training and validation routines
+├── hard_voting.py   # Hard voting
+├── soft_voting.py   # Soft voting
+├── inference.py     # Test predict 
+├── train.py         # Training and validation (model in it)
 ├── requirements.txt # Project dependencies
-└── data/           # Dataset directory
-    ├── train/      # Training images (100 classes)
-    ├── val/        # Validation images
-    └── test/       # Test images
+└── data/            # Dataset directory
+    ├── train/       # Training images(100 classes)
+    ├── val/         # Validation images
+    └── test/        # Test images
 ```
 
 ## Usage
@@ -58,13 +58,13 @@ python inference.py
 ### Soft Voting
 
 ```bash
-python inference.py 
+python soft_voting.py
 ```
 
 ### Hard Voting
 
 ```bash
-python inference.py 
+python hard_voting.py
 ```
 Hyperparameter:
 - `--test_data_dir data/test`: Directory containing test images (default: "./data/test")
