@@ -39,23 +39,34 @@ pip install -r requirements.txt
 python train.py 
 ```
 
-Additional training options:
-- `--num_epochs 20`: Set number of training epochs (default: 20)
-- `--batch_size 10`: Change batch size (default: 10)
-- `--learning_rate 1e-5`: Adjust learning rate (default: 1e-5)
-- `--criterion focal`: Select loss function, options: "focal" or "cross_entropy" (default: "focal")
-- `--nodropout`: Disable dropout (default: dropout enabled with p=0.5)
-- `--seed 42`: Set random seed for reproducibility (default: 42)
-- `--device cuda`: Select device for training (default: "cuda")
-- `--weighted_loss`: Enable class weighting in loss function
+Hyperparameter:
+- `Batch size`: 32
+- `Epochs`: 60
+- `Optimizer`: SGD
+- `Learning rate`: 0.01
+- `Momentum`: 0.9
+- `Weight decay`: 5e-4
+- `Learning rate scheduler`: Cosine Annealing LR
+- `Loss function`: CrossEntropyLoss
+- `Label smoothing`: 0.05
 
 ### Inference
 
 ```bash
 python inference.py 
 ```
+### Soft Voting
 
-Options:
+```bash
+python inference.py 
+```
+
+### Hard Voting
+
+```bash
+python inference.py 
+```
+Hyperparameter:
 - `--test_data_dir data/test`: Directory containing test images (default: "./data/test")
 - `--model_path`: Path to the trained model weights (required)
 - `--save_dir ./results`: Directory to save prediction results (default: "./results")
