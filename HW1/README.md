@@ -75,7 +75,7 @@ The following modifications and strategies are applied in the model and training
 
 The implementation uses mixed precision training for efficiency and includes early stopping to prevent overfitting.
 
-## Performance snapshot
+## Performance
 
 - Validation accuracy: 0.9133
 - Public test data accuracy: 0.96
