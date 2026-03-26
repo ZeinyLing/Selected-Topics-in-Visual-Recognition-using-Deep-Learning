@@ -1,7 +1,8 @@
 
 # NYCU Visual Recognition using Deep Learning 2026 HW1
-* **StudentID:** 314551087
-* **Name:**  黃奕睿
+
+* **Student ID:** 314551087
+* **Name:** 黃奕睿
 
 ## Introduction
 
@@ -10,8 +11,7 @@ Based on these requirements, this work adopts a modified ResNet50 architecture e
 
 ## Environment Setup
 
-### Dependencies
-
+How to install dependence
 ```bash
 pip install -r requirements.txt
 ```
