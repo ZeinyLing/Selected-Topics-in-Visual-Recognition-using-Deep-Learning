@@ -1,5 +1,5 @@
 
-# NYCU Visual Recognition using Deep Learning 2026 HW1
+# NYCU Visual Computer Vision 2026 HW1
 
 * **Student ID:** 314551087
 * **Name:** 黃奕睿
