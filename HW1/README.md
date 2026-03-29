@@ -58,7 +58,7 @@ Hyperparameter:
 - `Loss function`: CrossEntropyLoss
 - `Label smoothing`: 0.05
 
-### Inference
+### Inference (single model)
 
 ```bash
 python inference.py 
@@ -78,6 +78,9 @@ python soft_voting.py
 ```
 ### Configuration
 ```bash
+# TEST PATH
+TEST_DIR = "./data/test"
+
 # MODEL PATH
 MODEL_PATHS = [
     "best_model_se_seed42.pkl",
@@ -93,6 +96,9 @@ python hard_voting.py
 ```
 ### Configuration
 ```bash
+# TEST PATH
+TEST_DIR = "./data/test"
+
 # MODEL PATH
 MODEL_PATHS = [
     "best_model_se_seed42.pkl",
