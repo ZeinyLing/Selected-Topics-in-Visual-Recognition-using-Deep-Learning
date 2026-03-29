@@ -38,7 +38,9 @@ pip install -r requirements.txt
 ```bash
 python train.py 
 ```
-
+```bash
+python train.py 
+```
 Hyperparameter:
 - `Batch size`: 32
 - `Epochs`: 60
@@ -55,10 +57,16 @@ Hyperparameter:
 ```bash
 python inference.py 
 ```
+```bash
+python train.py 
+```
 ### Soft Voting
 
 ```bash
 python soft_voting.py
+```
+```bash
+python train.py 
 ```
 
 ### Hard Voting
@@ -66,15 +74,9 @@ python soft_voting.py
 ```bash
 python hard_voting.py
 ```
-Hyperparameter:
-- `--test_data_dir data/test`: Directory containing test images (default: "./data/test")
-- `--model_path`: Path to the trained model weights (required)
-- `--save_dir ./results`: Directory to save prediction results (default: "./results")
-- `--tta`: Enable Test-Time Augmentation for improved accuracy
-- `--batch_size 10`: Adjust batch size for inference (default: 10)
-- `--nodropout`: Disable dropout (should match training configuration)
-- `--device cuda`: Select device for inference (default: "cuda")
-
+```bash
+python train.py 
+```
 ## Strategy and Adjustments
 
 The following modifications and strategies are applied in the model and training process:
