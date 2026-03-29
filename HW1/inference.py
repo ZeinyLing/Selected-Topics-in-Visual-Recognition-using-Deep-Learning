@@ -13,7 +13,7 @@ import pickle
 # =========================
 
 TEST_DIR = "./data/test"
-MODEL_PATH = "best_model_se_seed50.pkl"
+MODEL_PATH = "best_model_se_seed69.pkl"
 
 IMG_SIZE = 600
 BATCH_SIZE = 32
@@ -216,6 +216,6 @@ with torch.no_grad():
 
 df = pd.DataFrame(results,columns=["image_name","pred_label"])
 
-df.to_csv("submission50.csv",index=False)
+df.to_csv("submission69.csv",index=False)
 
-print("Saved submission50.csv")
+print("Saved submission69.csv")
