@@ -39,7 +39,12 @@ pip install -r requirements.txt
 python train.py 
 ```
 ```bash
-python train.py 
+# SEED SET
+69 50 42
+
+# DATA PATH
+TRAIN_DIR = "./data/train"
+VAL_DIR = "./data/val"
 ```
 Hyperparameter:
 - `Batch size`: 32
