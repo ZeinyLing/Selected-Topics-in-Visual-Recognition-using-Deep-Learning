@@ -40,7 +40,7 @@ python train.py
 ```
 ```bash
 # SEED SET
-69 50 42
+SEED = 69 #50 42 (The 3 model's)
 
 # DATA PATH
 TRAIN_DIR = "./data/train"
