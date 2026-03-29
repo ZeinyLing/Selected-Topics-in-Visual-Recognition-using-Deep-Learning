@@ -121,7 +121,7 @@ The implementation uses mixed precision training for efficiency and includes ear
 ## Performance
 
 - Parameters: 24.4M (within competition constraint of 100M)
-- Parameters: 73.2M (within competition constraint of 100M)
+- Parameters: 73.2M (3 models)  (within competition constraint of 100M)
 - Validation accuracy: 0.9133
 - Public test data accuracy: 0.96
 
