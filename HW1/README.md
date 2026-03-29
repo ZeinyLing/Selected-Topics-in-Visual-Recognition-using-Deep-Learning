@@ -63,7 +63,11 @@ Hyperparameter:
 python inference.py 
 ```
 ```bash
-python train.py 
+# TEST PATH
+TEST_DIR = "./data/test"
+
+# MODEL PATH
+MODEL_PATH = "./best_model_se_seed69.pkl"
 ```
 ### Soft Voting
 
