@@ -1,4 +1,4 @@
-# NYCU 2026 Selected Topics in Visual Recognition using Deep Learning
+# NYCU Selected Topics in Visual Recognition using Deep Learning 2026
 
 * **Student ID:** 314551087
 * **Name:** 黃奕睿
