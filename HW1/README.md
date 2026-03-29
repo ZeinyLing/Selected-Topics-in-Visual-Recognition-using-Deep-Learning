@@ -38,6 +38,7 @@ pip install -r requirements.txt
 ```bash
 python train.py 
 ```
+### Configuration
 ```bash
 # SEED SET
 SEED = 69 #50 42 (The 3 model's)
@@ -62,6 +63,7 @@ Hyperparameter:
 ```bash
 python inference.py 
 ```
+### Configuration
 ```bash
 # TEST PATH
 TEST_DIR = "./data/test"
@@ -74,6 +76,7 @@ MODEL_PATH = "./best_model_se_seed69.pkl"  # "./best_model_se_seed50.pkl" "./bes
 ```bash
 python soft_voting.py
 ```
+### Configuration
 ```bash
 # MODEL PATH
 MODEL_PATHS = [
@@ -88,6 +91,7 @@ MODEL_PATHS = [
 ```bash
 python hard_voting.py
 ```
+### Configuration
 ```bash
 # MODEL PATH
 MODEL_PATHS = [
