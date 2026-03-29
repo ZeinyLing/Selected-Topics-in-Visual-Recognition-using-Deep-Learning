@@ -75,7 +75,12 @@ MODEL_PATH = "./best_model_se_seed69.pkl"  # "./best_model_se_seed50.pkl" "./bes
 python soft_voting.py
 ```
 ```bash
-python train.py 
+# MODEL PATH
+MODEL_PATHS = [
+    "best_model_se_seed42.pkl",
+    "best_model_se_seed69.pkl",
+    "best_model_se_seed50.pkl",
+]
 ```
 
 ### Hard Voting
@@ -84,7 +89,12 @@ python train.py
 python hard_voting.py
 ```
 ```bash
-python train.py 
+# MODEL PATH
+MODEL_PATHS = [
+    "best_model_se_seed42.pkl",
+    "best_model_se_seed69.pkl",
+    "best_model_se_seed50.pkl",
+]
 ```
 ## Strategy and Adjustments
 
