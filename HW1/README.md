@@ -67,7 +67,7 @@ python inference.py
 TEST_DIR = "./data/test"
 
 # MODEL PATH
-MODEL_PATH = "./best_model_se_seed69.pkl" #"./best_model_se_seed42.pkl" "./best_model_se_seed50.pkl"
+MODEL_PATH = "./best_model_se_seed69.pkl"  # "./best_model_se_seed50.pkl" "./best_model_se_seed42.pkl"
 ```
 ### Soft Voting
 
