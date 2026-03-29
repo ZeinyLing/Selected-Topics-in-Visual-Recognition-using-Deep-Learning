@@ -237,6 +237,6 @@ with torch.no_grad():
 
 df = pd.DataFrame(results,columns=["image_name","pred_label"])
 
-df.to_csv("submission_softvoting3.csv",index=False)
+df.to_csv("submission_hardvoting.csv",index=False)
 
-print("Saved submission_softvoting3_hard.csv")
+print("Saved submission_hardvoting.csv")
