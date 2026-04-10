@@ -8,7 +8,7 @@
 | 作業 | 連結 | Task |
 |------|------|------|
 | HW-1 | [Link](https://github.com/ZeinyLing/Selected-Topics-in-Visual-Recognition-using-Deep-Learning/tree/main/HW1) | Image classification |
-| HW-2 | [Link]|  |
+| HW-2 | [Link](https://github.com/ZeinyLing/Selected-Topics-in-Visual-Recognition-using-Deep-Learning/tree/main/HW2)| Digit Detection |
 | HW-3 |[Link] |  |
 | HW-4 |[Link] |  |
 | Final |[Link] |  |
