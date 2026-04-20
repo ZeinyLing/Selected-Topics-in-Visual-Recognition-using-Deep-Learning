@@ -1,5 +1,5 @@
 
-# NYCU Visual Recognition using Deep Learning 2026 HW2
+# NYCU  Computer Vision 2026 HW2
 
 * **Student ID:** 314551087
 * **Name:** 黃奕睿
@@ -7,7 +7,7 @@
 
 ## Introduction
 
-Based on these requirements, this work adopts a modified ResNet50 architecture enhanced with Squeeze-and-Excitation (SE) blocks. Specifically, SE modules are inserted after each of the four main residual stages to recalibrate channel-wise feature responses. By applying global average pooling followed by channel-wise weighting, the SE mechanism enables the model to emphasize informative features while suppressing less relevant ones. Finally, the model applies global average pooling, followed by dropout and a fully connected layer to produce predictions over the 100 classes.
+The dataset consists of RGB images containing multiple digits with variations in scale, orientation, background, and illumination, making detection challenging. It includes 30,062 training images, 3,340 validation images, and 13,068 test images, where each image may contain multiple digits from different classes, requiring strong multi-object detection capability. The annotations follow the COCO-style JSON format, with each object represented by a bounding box [xmin, ymin, w, h] and a class label, where coordinates are in pixel values and category_id starts from 1. The assignment requires using Detection Transformer (DETR) with a ResNet-50 backbone as the primary model, and further incorporates Deformable DETR and Conditional DETR to address limitations such as slow convergence and weaker performance on small object detection.
 
 
 ## Environment Setup
