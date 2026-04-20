@@ -79,9 +79,8 @@ The implementation uses mixed precision training for efficiency and includes ear
 
 ## Performance snapshot
 
-- Validation accuracy: 0.9133
-- Public test data accuracy: 0.96
-- Parameters: 89.1M (within competition constraint of 100M)
+- Validation COCO mAP@0.5:0.95 : 0.9133
+- Public test data COCO mAP@0.5:0.95 : 0.4
 
 ## Performance snapshot
 
