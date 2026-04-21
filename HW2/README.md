@@ -22,15 +22,12 @@ pip install -r requirements.txt
 
 ```
 .
-├── config.py       # Configuration parameters
-├── config.py       # Configuration parameters
-├── inference.py    # Test prediction code
-├── train.py        # Training and validation routines
+├── hard_voting.py   # Hard voting
+├── soft_voting.py   # Soft voting
+├── inference.py     # Test predict 
+├── train.py         # Training and validation (model in it)
 ├── requirements.txt # Project dependencies
-└── data/           # Dataset directory
-    ├── train/      # Training images (100 classes)
-    ├── val/        # Validation images
-    └── test/       # Test images
+└── data/            # Dataset directory
 ```
 
 ## Usage
@@ -41,15 +38,25 @@ pip install -r requirements.txt
 python train.py 
 ```
 
-Additional training options:
-- `--num_epochs 20`: Set number of training epochs (default: 20)
-- `--batch_size 10`: Change batch size (default: 10)
-- `--learning_rate 1e-5`: Adjust learning rate (default: 1e-5)
-- `--criterion focal`: Select loss function, options: "focal" or "cross_entropy" (default: "focal")
-- `--nodropout`: Disable dropout (default: dropout enabled with p=0.5)
-- `--seed 42`: Set random seed for reproducibility (default: 42)
-- `--device cuda`: Select device for training (default: "cuda")
-- `--weighted_loss`: Enable class weighting in loss function
+### Configuration
+```bash
+# SEED SET
+SEED = 69 #50 42 (The 3 model's)
+
+# DATA PATH
+TRAIN_DIR = "./data/train"
+VAL_DIR = "./data/val"
+```
+Hyperparameter:
+- `Batch size`: 32
+- `Epochs`: 60
+- `Optimizer`: SGD
+- `Learning rate`: 0.01
+- `Momentum`: 0.9
+- `Weight decay`: 5e-4
+- `Learning rate scheduler`: Cosine Annealing LR
+- `Loss function`: CrossEntropyLoss
+- `Label smoothing`: 0.05
 
 ### Inference
 
