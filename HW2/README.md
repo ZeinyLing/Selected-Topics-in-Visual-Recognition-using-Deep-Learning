@@ -98,7 +98,6 @@ python inference_deformable.py
 
 ## Performance
 
-- Validation COCO mAP@0.5:0.95 : 0.9133
 - Public test data COCO mAP@0.5:0.95 : 0.4
 
 | Model | Best Val mAP50:90 | Scores |
