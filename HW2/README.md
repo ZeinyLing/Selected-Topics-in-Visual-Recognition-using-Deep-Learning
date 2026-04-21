@@ -101,6 +101,13 @@ python inference_deformable.py
 - Validation COCO mAP@0.5:0.95 : 0.9133
 - Public test data COCO mAP@0.5:0.95 : 0.4
 
+| Model | Best Val mAP50:90 | Scores |
+|------|------|------|
+| DETR | 0.3688 | 0.34 |
+|DETR (7 layers) | 0.3596| 0.33 |
+| Conditional DETR | 0.4206 | 0.38 |
+| Deformable DETR | 0.4809 | 0.4 |
+
 ## Performance snapshot
 
 ![image](https://github.com/ZeinyLing/Selected-Topics-in-Visual-Recognition-using-Deep-Learning/blob/main/HW2/imgs/score.png)
