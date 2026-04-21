@@ -62,7 +62,7 @@ Hyperparameter:
 ### Inference
 
 ```bash
-python inference_detr
+python inference_detr.py
 ```
 ## Strategy and Adjustments
 
@@ -77,23 +77,23 @@ The following modifications and strategies are applied in the model and training
 
 ### Conditional DETR
 ```bash
-pip install -r requirements.txt
+python train_conditional.py
 ```
 ### Inference
 
 ```bash
-python inference_detr
+python inference_conditional.py
 ```
 
 ### Deformable DETR
 ```bash
-pip install -r requirements.txt
+python train_deformable.py
 ```
 
 ### Inference
 
 ```bash
-python inference_detr
+python inference_deformable.py
 ```
 
 ## Performance
