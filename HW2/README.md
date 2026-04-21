@@ -77,12 +77,10 @@ Options:
 
 The following modifications and strategies are applied in the model and training process:
 
-1. **SE Block**: Squeeze-and-Excitation (SE) blocks are integrated into ResNet50 to enhance the model’s ability to focus on important channel features.
-2. **Dropout**: A dropout layer (0.4) is added before the classification layer to reduce the risk of overfitting.
-3. **Channel Attention**: A Squeeze-and-Excitation module with reduction ratio 16 recalibrates feature importance
-4. **Classification Head**: A classifier with optional dropout (p=0.5) produces the final prediction across 100 classes
-
-The implementation uses mixed precision training for efficiency and includes early stopping to prevent overfitting.
+1. **Differential Learning Rates**:A smaller learning rate is applied to the pretrained backbone (1e-5), and a larger learning rate is used for the Transformer and prediction heads (1e-4). 
+2. **Data Cleaning and Validation**: Invalid and extremely small bounding boxes are removed, and all annotations are clamped within image boundaries to prevent numerical instability. 
+3. **Custom Collate Function**: Manual padding and pixel mask generation are implemented to handle variable image sizes and ensure compatibility across library versions. 
+4. **Training Stability Techniques**: Gradient clipping (0.1) and disabling mixed precision (fp16) are used to avoid unstable training and NaN issues.
 
 ## Performance snapshot
 
