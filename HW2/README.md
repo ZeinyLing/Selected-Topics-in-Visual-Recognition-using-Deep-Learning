@@ -62,18 +62,8 @@ Hyperparameter:
 ### Inference
 
 ```bash
-python inference.py 
+python inference_detr
 ```
-
-Options:
-- `--test_data_dir data/test`: Directory containing test images (default: "./data/test")
-- `--model_path`: Path to the trained model weights (required)
-- `--save_dir ./results`: Directory to save prediction results (default: "./results")
-- `--tta`: Enable Test-Time Augmentation for improved accuracy
-- `--batch_size 10`: Adjust batch size for inference (default: 10)
-- `--nodropout`: Disable dropout (should match training configuration)
-- `--device cuda`: Select device for inference (default: "cuda")
-
 ## Strategy and Adjustments
 
 The following modifications and strategies are applied in the model and training process:
@@ -82,6 +72,29 @@ The following modifications and strategies are applied in the model and training
 2. **Data Cleaning and Validation**: Invalid and extremely small bounding boxes are removed, and all annotations are clamped within image boundaries to prevent numerical instability. 
 3. **Custom Collate Function**: Manual padding and pixel mask generation are implemented to handle variable image sizes and ensure compatibility across library versions. 
 4. **Training Stability Techniques**: Gradient clipping (0.1) and disabling mixed precision (fp16) are used to avoid unstable training and NaN issues.
+
+## Additional experiments
+
+### Conditional DETR
+```bash
+pip install -r requirements.txt
+```
+### Inference
+
+```bash
+python inference_detr
+```
+
+### Deformable DETR
+```bash
+pip install -r requirements.txt
+```
+
+### Inference
+
+```bash
+python inference_detr
+```
 
 ## Performance
 
