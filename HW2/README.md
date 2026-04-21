@@ -22,12 +22,14 @@ pip install -r requirements.txt
 
 ```
 .
-├── hard_voting.py   # Hard voting
-├── soft_voting.py   # Soft voting
-├── inference.py     # Test predict 
-├── train.py         # Training and validation (model in it)
-├── requirements.txt # Project dependencies
-└── data/            # Dataset directory
+├── inference_conditional.py   # inference conditional detr
+├── inference_deformable.py    # inference deformable detr
+├── inference_detr.py          # inference detr
+├── train_conditional.py       # Training and validation conditional detr
+├── train_deformable.py        # Training and validation deformable detr
+├── train_detr.py              # Training and validation detr
+├── requirements.txt           # Project dependencies
+└── data/                      # Dataset directory
 ```
 
 ## Usage
@@ -35,28 +37,27 @@ pip install -r requirements.txt
 ### Training
 
 ```bash
-python train.py 
+python train_detr.py 
 ```
 
 ### Configuration
 ```bash
-# SEED SET
-SEED = 69 #50 42 (The 3 model's)
-
 # DATA PATH
-TRAIN_DIR = "./data/train"
-VAL_DIR = "./data/val"
+TRAIN_IMG_DIR = "./dataset/train"
+TRAIN_JSON = "./dataset/annotations/train.json"
+VAL_IMG_DIR = "./dataset/val"
+VAL_JSON = "./dataset/annotations/val.json"
 ```
 Hyperparameter:
-- `Batch size`: 32
-- `Epochs`: 60
-- `Optimizer`: SGD
-- `Learning rate`: 0.01
-- `Momentum`: 0.9
-- `Weight decay`: 5e-4
-- `Learning rate scheduler`: Cosine Annealing LR
-- `Loss function`: CrossEntropyLoss
-- `Label smoothing`: 0.05
+- `Batch size`: 2
+- `Epochs`: 200
+- `Optimizer`: AdamW
+- `Learning rate`: 1e-5
+- `Transformer + Heads LR`: 1e-4
+- `Weight decay`: 1e-4
+- `Learning rate scheduler`: Linear
+- `Loss function`: Classification loss + Box regression loss + Box overlap loss
+- `Gradient clipping`: 0.1
 
 ### Inference
 
@@ -82,7 +83,7 @@ The following modifications and strategies are applied in the model and training
 3. **Custom Collate Function**: Manual padding and pixel mask generation are implemented to handle variable image sizes and ensure compatibility across library versions. 
 4. **Training Stability Techniques**: Gradient clipping (0.1) and disabling mixed precision (fp16) are used to avoid unstable training and NaN issues.
 
-## Performance snapshot
+## Performance
 
 - Validation COCO mAP@0.5:0.95 : 0.9133
 - Public test data COCO mAP@0.5:0.95 : 0.4
