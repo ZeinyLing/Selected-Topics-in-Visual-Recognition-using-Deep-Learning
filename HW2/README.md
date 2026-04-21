@@ -75,22 +75,22 @@ The following modifications and strategies are applied in the model and training
 
 ## Additional experiments
 
-### Conditional DETR
+### Training Conditional DETR
 ```bash
 python train_conditional.py
 ```
-### Inference
+### Inference Conditional DETR
 
 ```bash
 python inference_conditional.py
 ```
 
-### Deformable DETR
+### Training Deformable DETR
 ```bash
 python train_deformable.py
 ```
 
-### Inference
+### Inference Deformable DETR
 
 ```bash
 python inference_deformable.py
