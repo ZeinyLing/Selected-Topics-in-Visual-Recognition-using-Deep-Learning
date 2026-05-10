@@ -107,11 +107,11 @@ python inference_deformable.py
 
 - Public test data AP50 :  0.5605
 
-| Model | Best Val AP50 | Scores |Scores |
+| Model | Best Val AP50 | Scores | Trainable parameters |
 |------|------|------|------|
-| Mask R-CNN | 0.4522 | 0.3300 | 43.72M |
-| Cbam Mask R-CNN | 0.4726| 0.3579 | 0.3300 |
-| Cascade Mask R-CNN | 0.4944 | 0.3893 | 0.3300 |
+| Mask R-CNN | 0.4522 | 0.3300 | 43.72 M |
+| Cbam Mask R-CNN | 0.4726| 0.3579 | 44.64 M |
+| Cascade Mask R-CNN | 0.4944 | 0.3893 | 60.96 M |
 | PointRend Cascade Mask R-CNN | 0.7736 | 0.5605 | 62.88M |
 
 ## Performance snapshot
