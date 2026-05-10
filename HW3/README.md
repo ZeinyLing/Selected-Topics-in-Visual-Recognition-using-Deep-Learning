@@ -84,23 +84,23 @@ The following modifications and strategies are applied in the model and training
 
 ### cbam maskrcnn
 ```bash
-python cbam_train.py
+python cbam_train.py                  # Train  
 
-python cbam_inference.py
+python cbam_inference.py              # inference
 ```
 
 ### cascade maskrcnn
 ```bash
-python cascade_train.py
+python cascade_train.py               # Train
 
-python cascade_inference.py
+python cascade_inference.py           # inference
 ```
 
 ###  pointrend cascade maskrcnn
 ```bash
-python pointrend_cascade_train.py
+python pointrend_cascade_train.py      # Train
 
-python pointrend_cascade_inference.py
+python pointrend_cascade_inference.py  # inference
 ```
 
 ## Performance
