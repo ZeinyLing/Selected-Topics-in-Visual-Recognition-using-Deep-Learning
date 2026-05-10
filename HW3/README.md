@@ -74,10 +74,11 @@ python maskrcnn_inference.py
 
 The following modifications and strategies are applied in the model and training process:
 
-1. **Differential Learning Rates**:A smaller learning rate is applied to the pretrained backbone (1e-5), and a larger learning rate is used for the Transformer and prediction heads (1e-4). 
-2. **Data Cleaning and Validation**: Invalid and extremely small bounding boxes are removed, and all annotations are clamped within image boundaries to prevent numerical instability. 
-3. **Custom Collate Function**: Manual padding and pixel mask generation are implemented to handle variable image sizes and ensure compatibility across library versions. 
-4. **Training Stability Techniques**: Gradient clipping (0.1) and disabling mixed precision (fp16) are used to avoid unstable training and NaN issues.
+1. Apply horizontal flip and vertical flip for data augmentation. 
+2. Update masks and bounding boxes after image flipping. 
+3. Use ImageNet pretrained weights to improve feature extraction. 
+4. Train the model with AdamW optimizer.
+5. Use CosineAnnealingLR to adjust the learning rate.
 
 ## Additional experiments
 
@@ -106,12 +107,12 @@ python inference_deformable.py
 
 - Public test data AP50 :  0.5605
 
-| Model | Best Val AP50 | Scores |
-|------|------|------|
-| Mask R-CNN | 0.4522 | 0.3300 |
-| Cbam Mask R-CNN | 0.4726| 0.3579 |
-| Cascade Mask R-CNN | 0.4944 | 0.3893 |
-| PointRend Cascade Mask R-CNN | 0.7736 | 0.5605 |
+| Model | Best Val AP50 | Scores |Scores |
+|------|------|------|------|
+| Mask R-CNN | 0.4522 | 0.3300 | 43.72M |
+| Cbam Mask R-CNN | 0.4726| 0.3579 | 0.3300 |
+| Cascade Mask R-CNN | 0.4944 | 0.3893 | 0.3300 |
+| PointRend Cascade Mask R-CNN | 0.7736 | 0.5605 | 62.88M |
 
 ## Performance snapshot
 
