@@ -89,18 +89,18 @@ python cbam_train.py
 python cbam_inference.py
 ```
 
-### Deformable DETR
+### cascade maskrcnn
 ```bash
-python train_deformable.py
+python cascade_train.py
 
-python inference_deformable.py
+python cascade_inference.py
 ```
 
-### Deformable DETR
+###  pointrend cascade maskrcnn
 ```bash
-python train_deformable.py
+python pointrend_cascade_train.py
 
-python inference_deformable.py
+python pointrend_cascade_inference.py
 ```
 
 ## Performance
@@ -115,4 +115,4 @@ python inference_deformable.py
 | PointRend Cascade Mask R-CNN | 0.7736 | 0.5605 | 62.88M |
 
 ## Performance snapshot
-<img src="img/score.png" width="900">
+<img src="img/score.png" width="1000">
