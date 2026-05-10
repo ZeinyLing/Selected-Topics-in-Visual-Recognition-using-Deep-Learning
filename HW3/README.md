@@ -48,10 +48,10 @@ python maskrcnn_train.py
 ### Configuration
 ```bash
 # DATA PATH
-TRAIN_IMG_DIR = "./dataset/train"
-TRAIN_JSON = "./dataset/annotations/train.json"
-VAL_IMG_DIR = "./dataset/val"
-VAL_JSON = "./dataset/annotations/val.json"
+DATA_ROOT = "./hw3-data-release"
+TRAIN_DIR = os.path.join(DATA_ROOT, "train")
+OUTPUT_DIR = "./outputs_maskrcnn_train"
+CKPT_PATH = os.path.join(OUTPUT_DIR, "best_model.pth")
 ```
 Hyperparameter:
 - `Optimizer`: AdamW
