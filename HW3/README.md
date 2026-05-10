@@ -25,16 +25,16 @@ pip install -r requirements.txt
 
 ```
 .
-├── inference_conditional.py   # inference conditional detr
-├── inference_deformable.py    # inference deformable detr
-├── inference_detr.py          # inference detr
-├── inference_detr.py          # inference detr
-├── train_conditional.py       # Training and validation conditional detr
-├── train_deformable.py        # Training and validation deformable detr
-├── train_detr.py              # Training and validation detr
-├── train_detr.py              # Training and validation detr
-├── requirements.txt           # Project dependencies
-└── data/                      # Dataset directory
+├── cbam_inference.py                       # inference cbam maskrcnn
+├── cascade_inference.py                    # inference cascade maskrcnn
+├── maskrcnn_inference.py                   # inference maskrcnn
+├── pointrend_cascade_inference.py          # inference pointrend cascade maskrcnn
+├── cbam_train.py                           # Training and validation cbam maskrcnn
+├── cascade_train.py                        # Training and validation cascade maskrcnn
+├── maskrcnn_train.py                       # Training and validation maskrcnn
+├── pointrend_cascade_train.py              # Training and validation pointrend cascade maskrcnn
+├── requirements.txt                        # Project dependencies
+└── data/                                   # Dataset directory
 ```
 
 ## Usage
@@ -42,7 +42,7 @@ pip install -r requirements.txt
 ### Training
 
 ```bash
-python train_detr.py 
+python maskrcnn_train.py 
 ```
 
 ### Configuration
@@ -54,20 +54,21 @@ VAL_IMG_DIR = "./dataset/val"
 VAL_JSON = "./dataset/annotations/val.json"
 ```
 Hyperparameter:
-- `Batch size`: 2
-- `Epochs`: 200
 - `Optimizer`: AdamW
-- `Learning rate`: 1e-5
-- `Transformer + Heads LR`: 1e-4
-- `Weight decay`: 1e-4
-- `Learning rate scheduler`: Linear
-- `Loss function`: Classification loss + Box regression loss + Box overlap loss
-- `Gradient clipping`: 0.1
+- `Weight Decay`: 1e-4
+- `Learning rate`: 1e-4
+- `Scheduler`: CosineAnnealingLR
+- `Batch Size`: 2
+- `Epochs`: 40
+- `Validation Ratio`: 0.15
+- `Mask Threshold`: 0.5
+- `Evaluation Score Threshold`: 0.05
+- `Minimum Instance Area`: 8
 
 ### Inference
 
 ```bash
-python inference_detr.py
+python maskrcnn_inference.py
 ```
 ## Strategy and Adjustments
 
@@ -103,14 +104,14 @@ python inference_deformable.py
 
 ## Performance
 
-- Public test data COCO mAP@0.5:0.95 : 0.4
+- Public test data AP50 :  0.5605
 
-| Model | Best Val mAP50:90 | Scores |
+| Model | Best Val AP50 | Scores |
 |------|------|------|
-| DETR | 0.3688 | 0.34 |
-|DETR (7 layers) | 0.3596| 0.33 |
-| Conditional DETR | 0.4206 | 0.38 |
-| Deformable DETR | 0.4809 | 0.4 |
+| Mask R-CNN | 0.4522 | 0.3300 |
+| Cbam Mask R-CNN | 0.4726| 0.3579 |
+| Cascade Mask R-CNN | 0.4944 | 0.3893 |
+| PointRend Cascade Mask R-CNN | 0.7736 | 0.5605 |
 
 ## Performance snapshot
 
