@@ -116,5 +116,5 @@ python inference_deformable.py
 
 ## Performance snapshot
 
-![image](https://github.com/ZeinyLing/Selected-Topics-in-Visual-Recognition-using-Deep-Learning/blob/main/HW2/imgs/score.png)
+![image](https://github.com/ZeinyLing/Selected-Topics-in-Visual-Recognition-using-Deep-Learning/blob/main/HW3/img/score.png)
 
