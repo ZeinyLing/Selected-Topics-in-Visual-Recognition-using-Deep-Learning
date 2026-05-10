@@ -115,6 +115,4 @@ python inference_deformable.py
 | PointRend Cascade Mask R-CNN | 0.7736 | 0.5605 | 62.88M |
 
 ## Performance snapshot
-
-![image](https://github.com/ZeinyLing/Selected-Topics-in-Visual-Recognition-using-Deep-Learning/blob/main/HW3/img/score.png)
-
+<img src="img/score.png" width="900">
