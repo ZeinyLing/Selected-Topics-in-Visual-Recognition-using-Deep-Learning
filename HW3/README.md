@@ -82,24 +82,24 @@ The following modifications and strategies are applied in the model and training
 
 ## Additional experiments
 
-### Training Conditional DETR
+### cbam maskrcnn
 ```bash
-python train_conditional.py
-```
-### Inference Conditional DETR
+python cbam_train.py
 
-```bash
-python inference_conditional.py
+python cbam_inference.py
 ```
 
-### Training Deformable DETR
+### Deformable DETR
 ```bash
 python train_deformable.py
+
+python inference_deformable.py
 ```
 
-### Inference Deformable DETR
-
+### Deformable DETR
 ```bash
+python train_deformable.py
+
 python inference_deformable.py
 ```
 
