@@ -7,7 +7,10 @@
 
 ## Introduction
 
-The dataset consists of RGB images containing multiple digits with variations in scale, orientation, background, and illumination, making detection challenging. It includes 30,062 training images, 3,340 validation images, and 13,068 test images, where each image may contain multiple digits from different classes, requiring strong multi-object detection capability. The annotations follow the COCO-style JSON format, with each object represented by a bounding box [xmin, ymin, w, h] and a class label, where coordinates are in pixel values and category_id starts from 1. The assignment requires using Detection Transformer (DETR) with a ResNet-50 backbone as the primary model, and further incorporates Deformable DETR and Conditional DETR to address limitations such as slow convergence and weaker performance on small object detection.
+This project focuses on instance segmentation for colored medical images. The goal is to detect, segment, and classify individual cells into four categories: class1–class4. Since cells may touch, overlap, or appear densely distributed, the model must separate each cell instance accurately.
+The dataset contains 209 training/validation images and 101 test images in .tif format. Because the dataset is small, preprocessing, data augmentation, and model design are important for improving generalization.
+The evaluation metric is AP50, which measures mask prediction quality at an IoU threshold of 0.5. Therefore, the model needs good classification, localization, and mask segmentation ability.
+In this work, Mask R-CNN is used as the baseline. We compare it with CBAM Mask R-CNN, Cascade Mask R-CNN, PointRend Mask R-CNN, and PointRend Cascade Mask R-CNN. These models are evaluated to find the most suitable architecture under the constraints of no external data, pure vision-based models, and fewer than 200M trainable parameters.
 
 
 ## Environment Setup
