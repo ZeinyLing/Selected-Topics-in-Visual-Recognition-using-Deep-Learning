@@ -1,5 +1,5 @@
 
-# NYCU  Computer Vision 2026 HW2
+# NYCU  Computer Vision 2026 HW3
 
 * **Student ID:** 314551087
 * **Name:** 黃奕睿
@@ -25,8 +25,10 @@ pip install -r requirements.txt
 ├── inference_conditional.py   # inference conditional detr
 ├── inference_deformable.py    # inference deformable detr
 ├── inference_detr.py          # inference detr
+├── inference_detr.py          # inference detr
 ├── train_conditional.py       # Training and validation conditional detr
 ├── train_deformable.py        # Training and validation deformable detr
+├── train_detr.py              # Training and validation detr
 ├── train_detr.py              # Training and validation detr
 ├── requirements.txt           # Project dependencies
 └── data/                      # Dataset directory
