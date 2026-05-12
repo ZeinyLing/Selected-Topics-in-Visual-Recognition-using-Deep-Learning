@@ -115,4 +115,4 @@ python pointrend_cascade_inference.py  # inference
 | PointRend Cascade Mask R-CNN | 0.7736 | 0.5605 | 62.88M |
 
 ## Performance snapshot
-<img src="img/score.png" width="1000">
+<img src="img/scores.png" width="1000">
