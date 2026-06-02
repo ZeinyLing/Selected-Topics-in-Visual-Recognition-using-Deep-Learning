@@ -26,14 +26,14 @@ pip install -r requirements.txt
 
 ```
 .
-├── train_V1.py           # inference cbam maskrcnn
-├── train_V2.py           # inference cascade maskrcnn
-├── train_V3.py           # inference maskrcnn
-├── train_V4.py           # inference pointrend cascade maskrcnn
-├── infer_V1.py           # Training and validation cbam maskrcnn
-├── infer_V2.py           # Training and validation cascade maskrcnn
-├── infer_V3.py           # Training and validation maskrcnn
-├── infer_V4.py           # Training and validation pointrend cascade maskrcnn
+├── train_V1.py           # Training baseline
+├── train_V2.py           # Training V2
+├── train_V3.py           # Training V3
+├── train_V4.py           # Training V4 (best)
+├── infer_V1.py           # inference baseline
+├── infer_V2.py           # inference V2
+├── infer_V3.py           # inference V3
+├── infer_V4.py           # inference V4 (best)
 ├── requirements.txt      # Project dependencies
 └── data/                 # Dataset directory
 ```
