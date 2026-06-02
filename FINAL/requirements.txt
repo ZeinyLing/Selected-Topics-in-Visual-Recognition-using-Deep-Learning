@@ -1,0 +1,9 @@
+# Install PyTorch FIRST (before this file):
+#   pip install torch==2.11.0 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+
+numpy>=1.23.0
+Pillow>=9.0.0
+tqdm>=4.64.0
+torch>=2.0.0
+torchvision>=0.15.0
+super-image>=0.1.7
