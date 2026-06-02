@@ -114,4 +114,4 @@ python pointrend_cascade_inference.py  # inference
 | PromptIR V4 | 29.860 | 30.90 |
 
 ## Performance snapshot
-<img src="img/scores.png" width="1000">
+<img src="img/scores.png" width="700">
