@@ -1,5 +1,5 @@
 
-# NYCU  Computer Vision 2026 HW3
+# NYCU  Computer Vision 2026 HW4
 
 * **Student ID:** 314551087
 * **Name:** 黃奕睿
@@ -54,16 +54,15 @@ OUTPUT_DIR = "./outputs_maskrcnn_train"
 CKPT_PATH = os.path.join(OUTPUT_DIR, "best_model.pth")
 ```
 Hyperparameter:
-- `Optimizer`: AdamW
+- `Image Size`: 256 × 256
+- `Epochs`: 100
+- `Batch Size`: 8
+- `Learning Rate`: 1e-4
 - `Weight Decay`: 1e-4
-- `Learning rate`: 1e-4
+- `Validation Ratio`: 0.1
+- `Optimizer`: AdamW
 - `Scheduler`: CosineAnnealingLR
-- `Batch Size`: 2
-- `Epochs`: 40
-- `Validation Ratio`: 0.15
-- `Mask Threshold`: 0.5
-- `Evaluation Score Threshold`: 0.05
-- `Minimum Instance Area`: 8
+- `Loss Function`: Charbonnier Loss
 
 ### Inference
 
