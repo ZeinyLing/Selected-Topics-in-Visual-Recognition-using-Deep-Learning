@@ -22,7 +22,7 @@ The project mainly uses models from the `super_image` library, **DRLN** is used 
 
 ---
 
-## 3. Training Pipeline (`train3.py`)
+## 3. Training Pipeline (`train.py`)
 
 The training script uses paired low-resolution and high-resolution images for supervised learning. The LR images are loaded from `./data_sr/train/lr`, while the HR images are loaded from `./data_sr/train/hr`.
 
@@ -57,7 +57,7 @@ Loss = 0.5 × L1 Loss + 0.5 × Charbonnier Loss
 L1 Loss helps preserve pixel-level accuracy, while Charbonnier Loss provides a smoother and more stable optimization objective for image restoration tasks.
 
 
-## 4. Single-Model Inference (`inf3.py`)
+## 4. Single-Model Inference (`inf.py`)
 
 The inference script loads one trained checkpoint and applies it to the test LR images. The output is converted into the required Kaggle submission format.
 
