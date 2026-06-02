@@ -104,14 +104,14 @@ python pointrend_cascade_inference.py  # inference
 
 ## Performance
 
-- Public test data AP50 :  0.5605
+- Public test data PSNR : 30.90
 
-| Model | Best Val AP50 | Scores | Trainable parameters |
-|------|------|------|------|
-| Mask R-CNN | 0.4522 | 0.3300 | 43.72 M |
-| Cbam Mask R-CNN | 0.4726| 0.3579 | 44.64 M |
-| Cascade Mask R-CNN | 0.4944 | 0.3893 | 60.96 M |
-| PointRend Cascade Mask R-CNN | 0.7736 | 0.5605 | 62.88M |
+| Model | Best Val PSNR | Scores |
+|------|------|------|
+| PromptIR | 27.963 | 29.75 |
+| PromptIR V2 | 28.455| 30.27 |
+| PromptIR V3 | 29.799 | 30.69 |
+| PromptIR V4 | 29.860 | 30.90 |
 
 ## Performance snapshot
 <img src="img/scores.png" width="1000">
