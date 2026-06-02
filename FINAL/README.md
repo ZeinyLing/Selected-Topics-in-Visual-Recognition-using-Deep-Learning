@@ -16,8 +16,8 @@ The project mainly uses models from the `super_image` library, including **MSRN*
 
 | File | Purpose |
 |---|---|
-| `train3.py` | Trains or retrains a super-resolution model using paired LR-HR images. |
-| `inf3.py` | Performs single-model inference and generates a Kaggle submission CSV. |
+| `train.py` | Trains or retrains a super-resolution model using paired LR-HR images. |
+| `inf.py` | Performs single-model inference and generates a Kaggle submission CSV. |
 | `voting.py` | Performs ensemble / voting inference using multiple checkpoints. |
 
 ---
