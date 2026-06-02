@@ -107,30 +107,6 @@ The script supports TTA modes:
 
 The current setting uses **x8 TTA**, which is slower but usually produces more stable predictions.
 
-### Submission Encoding
-
-After generating the super-resolution image, the result is converted from RGB to BGR and encoded using the official Kaggle-style RLE + zlib + base64 format. The final output is saved as a CSV file with the following columns:
-
-```text
-id, filename, rle
-```
-
----
-
-## 5. Voting / Ensemble Inference (`voting.py`)
-
-The voting script improves inference by combining predictions from multiple trained checkpoints. This can reduce the effect of individual model errors and produce more stable results.
-
-### Ensemble Checkpoints
-
-The current script uses two checkpoints:
-
-| Checkpoint | Weight |
-|---|---:|
-| `./outputs_super_image_drln_retrain_vnew/28.32best.pth` | 0.9 |
-| `./outputs_super_image_drln_finetune_v3_from_f26055/best.pth` | 1.0 |
-
-More checkpoints can be added to the `ENSEMBLE_CKPTS` list.
 
 ### Fusion Modes
 
@@ -140,64 +116,4 @@ More checkpoints can be added to the `ENSEMBLE_CKPTS` list.
 | `weighted_mean` | Averages predictions according to the checkpoint weights. |
 | `median` | Uses pixel-level median fusion, which is more robust to outlier predictions. |
 
-The current setting uses:
 
-```text
-FUSION_MODE = "mean"
-```
-
-This means each model prediction contributes equally to the final output.
-
-### Why Ensemble Helps
-
-Single-model inference may produce unstable details in some images. Ensemble inference combines multiple models or checkpoints, which can smooth unstable predictions and improve visual consistency. In super-resolution tasks, this is especially useful because different checkpoints may reconstruct textures and edges slightly differently.
-
----
-
-## 6. Overall Workflow
-
-```text
-1. Prepare LR-HR training image pairs
-        ↓
-2. Train DRLN model with patch-based supervised learning
-        ↓
-3. Save best checkpoint according to validation PSNR
-        ↓
-4. Run single-model inference or ensemble inference
-        ↓
-5. Apply tile inference and x8 TTA
-        ↓
-6. Encode predictions into Kaggle submission CSV
-```
-
----
-
-## 7. Key Techniques
-
-### Patch-Based Training
-
-Patch-based training allows the model to learn local textures and edges while reducing memory consumption. It also increases the number of training samples because multiple random crops can be generated from the same image.
-
-### Charbonnier Loss
-
-Charbonnier Loss is a smooth version of L1 Loss. It is commonly used in low-level vision tasks because it is less sensitive to small pixel-level noise and provides stable training.
-
-### EMA
-
-Exponential Moving Average keeps a smoothed version of the model weights during training. The EMA model is often more stable than the raw model and can improve validation PSNR.
-
-### Tile Inference
-
-Tile inference makes it possible to process large images with limited GPU memory. Overlapping tiles help reduce visible seams in the final reconstructed image.
-
-### TTA and Ensemble
-
-TTA improves prediction stability by averaging outputs from transformed versions of the same input. Ensemble inference further improves robustness by averaging predictions from multiple checkpoints.
-
----
-
-## 8. Conclusion
-
-This project builds a complete super-resolution pipeline from training to Kaggle submission generation. The training script uses DRLN with patch-based learning, data augmentation, mixed precision, EMA, and a combined L1 + Charbonnier loss. The inference scripts further improve output quality through tile inference, x8 test-time augmentation, and optional ensemble voting.
-
-Overall, the design focuses on improving **PSNR**, reducing inference artifacts, and producing stable high-resolution predictions suitable for competition submission.
