@@ -98,3 +98,28 @@ The current setting uses **x8 TTA**, which is slower but usually produces more s
 | `median` | Uses pixel-level median fusion, which is more robust to outlier predictions. |
 
 
+### Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Training
+
+```bash
+python train.py 
+```
+
+### Inference
+
+```bash
+python inf.py
+```
+
+### Voting
+
+```bash
+python voting.py
+```
+
+
