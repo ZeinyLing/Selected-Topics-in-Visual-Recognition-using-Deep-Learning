@@ -81,9 +81,9 @@ The following modifications and strategies are applied in the model and training
 
 ## Additional experiments
 
-### cbam maskrcnn
+### V1~3 
 ```bash
-python train_V<1~3>.py 
+python train_V<1~3>.py # select the version you want
 
 python infer_V<1~3>.py
 ```
