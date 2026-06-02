@@ -42,7 +42,7 @@ pip install -r requirements.txt
 ### Training
 
 ```bash
-python maskrcnn_train.py 
+python train_V4.py 
 ```
 
 ### Configuration
@@ -67,7 +67,7 @@ Hyperparameter:
 ### Inference
 
 ```bash
-python maskrcnn_inference.py
+python infer_V4.py
 ```
 ## Strategy and Adjustments
 
@@ -86,20 +86,6 @@ The following modifications and strategies are applied in the model and training
 python cbam_train.py                  # Train  
 
 python cbam_inference.py              # inference
-```
-
-### cascade maskrcnn
-```bash
-python cascade_train.py               # Train
-
-python cascade_inference.py           # inference
-```
-
-###  pointrend cascade maskrcnn
-```bash
-python pointrend_cascade_train.py      # Train
-
-python pointrend_cascade_inference.py  # inference
 ```
 
 ## Performance
