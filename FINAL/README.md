@@ -30,7 +30,6 @@ The training script uses paired low-resolution and high-resolution images for su
 
 | Setting | Value |
 |---|---:|
-| Model | DRLN |
 | Scale factor | ×4 |
 | Patch size | 128 |
 | Epochs | 150 |
@@ -40,8 +39,6 @@ The training script uses paired low-resolution and high-resolution images for su
 | Optimizer | AdamW |
 | Weight decay | 1e-4 |
 | Scheduler | CosineAnnealingLR |
-| AMP | Enabled |
-| EMA | Enabled |
 | EMA decay | 0.999 |
 | Loss | 0.5 × L1 + 0.5 × Charbonnier |
 
@@ -59,17 +56,6 @@ Loss = 0.5 × L1 Loss + 0.5 × Charbonnier Loss
 
 L1 Loss helps preserve pixel-level accuracy, while Charbonnier Loss provides a smoother and more stable optimization objective for image restoration tasks.
 
-### Model Saving
-
-During training, the script saves:
-
-- `last.pth`: the latest checkpoint.
-- `best.pth`: the checkpoint with the highest validation PSNR.
-- `train_log.csv`: the training log, including loss, L1 loss, Charbonnier loss, validation PSNR, and best PSNR.
-
-The best model is selected based on **validation PSNR**.
-
----
 
 ## 4. Single-Model Inference (`inf3.py`)
 
@@ -79,11 +65,6 @@ The inference script loads one trained checkpoint and applies it to the test LR 
 
 | Setting | Value |
 |---|---:|
-| Test LR directory | `./data_sr/test/lr` |
-| Sample submission | `./data_sr/sample_submission.csv` |
-| Checkpoint | `./outputs_super_image_drln_retrain_vnew/28.32best.pth` |
-| Output CSV | `./n28.32submission_tta_x8_64.csv` |
-| Tile inference | Enabled |
 | Tile size | 256 |
 | Tile overlap | 64 |
 | TTA | Enabled |
