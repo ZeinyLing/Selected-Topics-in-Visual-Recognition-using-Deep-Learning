@@ -8,7 +8,7 @@ This project focuses on **image super-resolution**, where the goal is to reconst
 2. **Single-model inference script**: generates super-resolution predictions from one trained checkpoint.
 3. **Voting / Ensemble inference script**: combines multiple checkpoints to improve prediction stability and final output quality.
 
-The project mainly uses models from the `super_image` library, including **MSRN**, **EDSR**, and **DRLN**. In the current setting, **DRLN** is used as the main model backbone.
+The project mainly uses models from the `super_image` library, **DRLN** is used as the main model backbone.
 
 ---
 
