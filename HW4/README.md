@@ -83,9 +83,9 @@ The following modifications and strategies are applied in the model and training
 
 ### cbam maskrcnn
 ```bash
-python cbam_train.py                  # Train  
+python train_V<1~3>.py 
 
-python cbam_inference.py              # inference
+python infer_V<1~3>.py
 ```
 
 ## Performance
