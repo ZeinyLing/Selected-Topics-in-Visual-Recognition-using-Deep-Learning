@@ -26,16 +26,16 @@ pip install -r requirements.txt
 
 ```
 .
-├── cbam_inference.py                       # inference cbam maskrcnn
-├── cascade_inference.py                    # inference cascade maskrcnn
-├── maskrcnn_inference.py                   # inference maskrcnn
-├── pointrend_cascade_inference.py          # inference pointrend cascade maskrcnn
-├── cbam_train.py                           # Training and validation cbam maskrcnn
-├── cascade_train.py                        # Training and validation cascade maskrcnn
-├── maskrcnn_train.py                       # Training and validation maskrcnn
-├── pointrend_cascade_train.py              # Training and validation pointrend cascade maskrcnn
-├── requirements.txt                        # Project dependencies
-└── data/                                   # Dataset directory
+├── train_V1.py           # inference cbam maskrcnn
+├── train_V2.py           # inference cascade maskrcnn
+├── train_V3.py           # inference maskrcnn
+├── train_V4.py           # inference pointrend cascade maskrcnn
+├── infer_V1.py           # Training and validation cbam maskrcnn
+├── infer_V2.py           # Training and validation cascade maskrcnn
+├── infer_V3.py           # Training and validation maskrcnn
+├── infer_V4.py           # Training and validation pointrend cascade maskrcnn
+├── requirements.txt      # Project dependencies
+└── data/                 # Dataset directory
 ```
 
 ## Usage
@@ -49,10 +49,9 @@ python train_V4.py
 ### Configuration
 ```bash
 # DATA PATH
-DATA_ROOT = "./hw3-data-release"
-TRAIN_DIR = os.path.join(DATA_ROOT, "train")
-OUTPUT_DIR = "./outputs_maskrcnn_train"
-CKPT_PATH = os.path.join(OUTPUT_DIR, "best_model.pth")
+DATA_ROOT = "./hw4_realse_dataset"
+TRAIN_DEGRADED_DIR = os.path.join(DATA_ROOT, "train", "degraded")
+TRAIN_CLEAN_DIR = os.path.join(DATA_ROOT, "train", "clean")
 ```
 Hyperparameter:
 - `Image Size`: 256 × 256
