@@ -7,10 +7,11 @@
 
 ## Introduction
 
-This project focuses on instance segmentation for colored medical images. The goal is to detect, segment, and classify individual cells into four categories: class1–class4. Since cells may touch, overlap, or appear densely distributed, the model must separate each cell instance accurately.
-The dataset contains 209 training/validation images and 101 test images in .tif format. Because the dataset is small, preprocessing, data augmentation, and model design are important for improving generalization.
-The evaluation metric is AP50, which measures mask prediction quality at an IoU threshold of 0.5. Therefore, the model needs good classification, localization, and mask segmentation ability.
-In this work, Mask R-CNN is used as the baseline. We compare it with CBAM Mask R-CNN, Cascade Mask R-CNN, PointRend Mask R-CNN, and PointRend Cascade Mask R-CNN. These models are evaluated to find the most suitable architecture under the constraints of no external data, pure vision-based models, and fewer than 200M trainable parameters.
+In HW4, the task focuses on image restoration, where the goal is to recover clean images from degraded inputs. The dataset contains two types of degraded images: rain and snow. These weather degradations reduce visual quality and make the image harder to interpret.
+The main requirement of this homework is to train one single model that can restore both rain-degraded and snow-degraded images. For each degraded training image, there is a corresponding clean image used as the target. The training and validation set includes 1600 degraded rain images, 1600 degraded snow images, and their matching clean images. The test set contains 100 degraded images, but their filenames only use simple numbers such as 0.png to 99.png, so the degradation type is not directly given.
+In this task, we are required to use PromptIR as the restoration model. PromptIR is suitable for this problem because it is designed for all-in-one image restoration. Instead of building separate models for rain removal and snow removal, PromptIR uses prompt-based information to help one model adapt to different degradation types.
+The final restored results are evaluated using PSNR (Peak Signal-to-Noise Ratio). A higher PSNR means that the restored image is closer to the clean ground truth image. The final submission should be saved as pred.npz, where each key is the original test image filename and each value is the restored image array with shape (3, H, W).
+
 
 
 ## Environment Setup
