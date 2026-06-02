@@ -121,5 +121,17 @@ python inf.py
 ```bash
 python voting.py
 ```
+## Performance
 
+- Public test data PSNR : 30.90
+
+| Method | TTA mode | Private | Public |
+|------|------|------|------|
+| Drln (single model) | none | 34.292 |34.224 |
+| Drln (single model) | x4| 34.394 |34.334 |
+| Drln (single model) | x8 | 34.424 |34.364 |
+| Drln (ensemble model) | x8 | 34.490 |34.424 |
+
+## Performance snapshot
+<img src="img/pubscore.png" width="1000">
 
