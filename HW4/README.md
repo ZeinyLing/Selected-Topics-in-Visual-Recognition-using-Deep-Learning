@@ -73,11 +73,11 @@ python infer_V4.py
 
 The following modifications and strategies are applied in the model and training process:
 
-1. Apply horizontal flip and vertical flip for data augmentation. 
-2. Update masks and bounding boxes after image flipping. 
-3. Use ImageNet pretrained weights to improve feature extraction. 
-4. Train the model with AdamW optimizer.
-5. Use CosineAnnealingLR to adjust the learning rate.
+1. Uses residual learning to predict only the degradation correction.
+2. Uses Charbonnier Loss for stable image restoration training.
+3. Uses	DetailRefineBlock.
+4. Uses	FrequencyEnhanceBlock.
+5. Uses	Gated skip fusion.
 
 ## Additional experiments
 
