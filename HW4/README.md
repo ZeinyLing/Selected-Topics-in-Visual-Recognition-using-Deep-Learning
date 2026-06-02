@@ -81,7 +81,7 @@ The following modifications and strategies are applied in the model and training
 
 ## Additional experiments
 
-### V1~3 
+### V1~3 (select the version you want)
 ```bash
 python train_V<1~3>.py # select the version you want
 
