@@ -11,5 +11,5 @@
 | HW-2 | [Link](https://github.com/ZeinyLing/Selected-Topics-in-Visual-Recognition-using-Deep-Learning/tree/main/HW2) | Digit Detection |
 | HW-3 | [Link](https://github.com/ZeinyLing/Selected-Topics-in-Visual-Recognition-using-Deep-Learning/tree/main/HW3) | Instance Segmentation |
 | HW-4 | [Link](https://github.com/ZeinyLing/Selected-Topics-in-Visual-Recognition-using-Deep-Learning/tree/main/HW4) | Image Restoration |
-| Final |[Link] |  |
+| Final |[Link](https://github.com/ZeinyLing/Selected-Topics-in-Visual-Recognition-using-Deep-Learning/tree/main/FINAL) | Super Resolution |
 
